@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 requests = "*"
+ginza = "*"
+ja-ginza = "*"
+scikit-learn = "*"
 
 [dev-packages]
 
