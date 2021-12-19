@@ -11,6 +11,6 @@ with open(author_list_path, 'r', encoding='utf-8') as f:
 scraper = AozoraBunkoScraper(save_dir)
 
 for author_name in author_list:
-    scraper.get_theauthor_books(author_name)
+    scraper.get_theauthor_books(author_name, maximum=10000, save_n=50)
 
 scraper.save()

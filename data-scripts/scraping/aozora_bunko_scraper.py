@@ -20,7 +20,7 @@ class AozoraBunkoScraper:
     def get_theauthor_books(self,
         author_name:str, maximum:int = 100, save_n:int = 10
         ) -> None:
-        book_list = self.aozorapi.get_booklist(author=author_name).json()
+        book_list = self.aozorapi.get_booklist(author=author_name, limit=maximum).json()
         print(f"found {len(book_list)} {author_name}'s books (max: {maximum})")
         book_list = book_list[:maximum]
         self.get_books(book_list, save_n=save_n)
